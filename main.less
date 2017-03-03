@@ -37,7 +37,12 @@
 @info-darker:  lighten(@info_color, 13.5%);
 @warning-darker:  lighten(@warning_color, 13.5%);
 
+@slidebg1: #3498DB;
+@slidebg2: #E67E22;
+@slidebg3: #9B59B6;
 
+@black1color: #252525;
+@green1color: #2DCC70;
 
 body {
     padding-top: 72px;
@@ -62,9 +67,18 @@ body h4 {
     margin-top: 0
 }
 
+.border-radius(@radius : 0.3em)
+{
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.margin-bottom20{margin-bottom: 20px;}
+
 .transition-timer-carousel-progress-bar {
     height: 3px;
-    background-color: #5cb85c;
+    background-color: @primary_color;
     width: 0%;
     margin: 0px 0px 0px 0px;
     border: none;
@@ -94,7 +108,7 @@ section#mySlider
                 bottom: 0;
                 .container > .caption-container {
                         background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
-                        border-top: 5px solid @success_color;
+                        border-top: 5px solid @primary_color;
                         display: inline-block;
                         float: left;
                         padding: 15px;
@@ -110,13 +124,13 @@ section#mySlider
 
                         .btn-nex-prev
                         {
-                            background-color:@success_color;
+                            background-color:@primary_color;
                             color: @white_color;
                             margin-right: 2px;
                             padding: 5px;
-                            border: 1px solid @success_color;
+                            border: 1px solid @primary_color;
                             &:hover{
-                                background-color:@success-darker;
+                                background-color:@primary-darker;
                             }
                         }
                 }
@@ -144,4 +158,37 @@ section#mySlider
               }
         }
     }
+}
+
+.slidebg1
+{
+    background-color: @slidebg1;
+}
+
+.slidebg2
+{
+    background-color: @slidebg2
+}
+
+.slidebg3
+{
+    background-color: @slidebg3
+}
+
+.no-magin{margin: 0;}
+section.main-info
+{
+    background-color: @white_color;
+    min-height: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+section.main-service
+{
+    background-color: @black1color;
+    color: @white_color;
+    min-height: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
